@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+       xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+       xsi:schemaLocation="http://www.springframework.org/schema/beans
+    		http://www.springframework.org/schema/beans/spring-beans.xsd">
+
+    <!-- 产生Connection的ConnectionFactory，由对应的 JMS服务厂商提供 -->
+    <bean id="targetConnectionFactory" class="org.apache.activemq.ActiveMQConnectionFactory">
+        <property name="brokerURL" value="tcp://192.168.79.128:61616" />
+    </bean>
+
+    <!-- Spring用于管理ConnectionFactory的ConnectionFactory -->
+    <bean id="connectionFactory"
+          class="org.springframework.jms.connection.SingleConnectionFactory">
+        <property name="targetConnectionFactory" ref="targetConnectionFactory" />
+    </bean>
+
+    <!-- 主题消息，生成页面 -->
+    <bean id="createPageTopic" class="org.apache.activemq.command.ActiveMQTopic">
+        <constructor-arg value="create_page_topic" />
+    </bean>
+
+
+    <!-- 消息监听容器 -->
+    <bean
+            class="org.springframework.jms.listener.DefaultMessageListenerContainer">
+        <property name="connectionFactory" ref="connectionFactory" />
+        <property name="destination" ref="createPageTopic" />
+        <property name="messageListener" ref="createPageListener" />
+    </bean>
+
+
+    <!-- 主题消息，删除页面 -->
+    <bean id="delPageTopic" class="org.apache.activemq.command.ActiveMQTopic">
+        <constructor-arg value="del_page_topic" />
+    </bean>
+
+
+    <!-- 消息监听容器 -->
+    <bean
+            class="org.springframework.jms.listener.DefaultMessageListenerContainer">
+        <property name="connectionFactory" ref="connectionFactory" />
+        <property name="destination" ref="delPageTopic" />
+        <property name="messageListener" ref="delPageListener" />
+    </bean>
+
+</beans>

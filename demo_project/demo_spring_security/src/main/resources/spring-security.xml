@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans:beans xmlns="http://www.springframework.org/schema/security"
+             xmlns:beans="http://www.springframework.org/schema/beans"
+             xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+             xsi:schemaLocation="http://www.springframework.org/schema/beans
+		http://www.springframework.org/schema/beans/spring-beans.xsd
+		http://www.springframework.org/schema/security
+		http://www.springframework.org/schema/security/spring-security.xsd">
+
+    <!--表示可以直接放行的url 配置 favicon.ico不进行安全拦截 -->
+    <http pattern="/favicon.ico" security="none" />
+
+    <!-- 页面拦截规则 -->
+    <http use-expressions="false">
+        <intercept-url pattern="/**" access="ROLE_USER" />
+        <!--开启默认的登陆页面-->
+        <form-login />
+    </http>
+
+    <!-- 认证管理器 -->
+    <authentication-manager>
+        <authentication-provider>
+            <user-service>
+                <!--认证方式一-->
+                <!--登录的用户采取配置文件写死的方式-->
+                <user name="admin" password="123456" authorities="ROLE_USER" />
+            </user-service>
+        </authentication-provider>
+    </authentication-manager>
+
+</beans:beans>

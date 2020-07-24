@@ -1,0 +1,102 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="CompilerConfiguration">
+    <annotationProcessing>
+      <profile name="Maven default annotation processors profile" enabled="true">
+        <sourceOutputDir name="target/generated-sources/annotations" />
+        <sourceTestOutputDir name="target/generated-test-sources/test-annotations" />
+        <outputRelativeToContentRoot value="true" />
+        <module name="demo_angularjs" />
+        <module name="youlexuan_page_interface" />
+        <module name="youlexuan_pay_service" />
+        <module name="youlexuan_content_service" />
+        <module name="youlexuan_solr_util" />
+        <module name="youlexuan_search_interface" />
+        <module name="youlexuan_search_service" />
+        <module name="youlexuan_page_web" />
+        <module name="youlexuan_manager_web" />
+        <module name="youlexuan_pay_interface" />
+        <module name="demo_spring_security" />
+        <module name="youlexuan_sellergoods_service" />
+        <module name="dubbo_service" />
+        <module name="sms_service" />
+        <module name="youlexuan_content_interface" />
+        <module name="youlexuan_order_interface" />
+        <module name="youlexuan_dao" />
+        <module name="youlexuan_user_interface" />
+        <module name="youlexuan_portal_web" />
+        <module name="youlexuan_search_web" />
+        <module name="youlexuan_cart_web" />
+        <module name="youlexuan_seckill_interface" />
+        <module name="youlexuan_seckill_service" />
+        <module name="youlexuan_pojo" />
+        <module name="youlexuan_cart_interface" />
+        <module name="youlexuan_user_web" />
+        <module name="springBootTest" />
+        <module name="youlexuan_cart_service" />
+        <module name="youlexuan_user_service" />
+        <module name="aaa" />
+        <module name="youlexuan_page_service" />
+        <module name="youlexuan_sellergoods_interface" />
+        <module name="youlexuan_order_service" />
+        <module name="youlexuan_seckill_web" />
+        <module name="demo_fastDFS" />
+        <module name="youlexuan_common" />
+        <module name="springTest" />
+        <module name="youlexuan_task_service" />
+        <module name="youlexuan_shop_web" />
+        <module name="dubbo_web" />
+      </profile>
+    </annotationProcessing>
+    <bytecodeTargetLevel>
+      <module name="aaa" target="1.8" />
+      <module name="apsa" target="1.8" />
+      <module name="demo_angularjs" target="1.8" />
+      <module name="demo_fastDFS" target="1.8" />
+      <module name="demo_project" target="1.8" />
+      <module name="demo_spring_security" target="1.8" />
+      <module name="dubbo_service" target="1.8" />
+      <module name="dubbo_web" target="1.8" />
+      <module name="sms_service" target="1.8" />
+      <module name="springBootTest" target="1.8" />
+      <module name="springTest" target="1.8" />
+      <module name="youlexuan_cart_interface" target="1.8" />
+      <module name="youlexuan_cart_service" target="1.8" />
+      <module name="youlexuan_cart_web" target="1.8" />
+      <module name="youlexuan_common" target="1.8" />
+      <module name="youlexuan_content_interface" target="1.8" />
+      <module name="youlexuan_content_service" target="1.8" />
+      <module name="youlexuan_dao" target="1.8" />
+      <module name="youlexuan_manager_web" target="1.8" />
+      <module name="youlexuan_order_interface" target="1.8" />
+      <module name="youlexuan_order_service" target="1.8" />
+      <module name="youlexuan_page_interface" target="1.8" />
+      <module name="youlexuan_page_service" target="1.8" />
+      <module name="youlexuan_page_web" target="1.8" />
+      <module name="youlexuan_parent" target="1.8" />
+      <module name="youlexuan_pay_interface" target="1.8" />
+      <module name="youlexuan_pay_service" target="1.8" />
+      <module name="youlexuan_pojo" target="1.8" />
+      <module name="youlexuan_portal_web" target="1.8" />
+      <module name="youlexuan_search_interface" target="1.8" />
+      <module name="youlexuan_search_service" target="1.8" />
+      <module name="youlexuan_search_web" target="1.8" />
+      <module name="youlexuan_seckill_interface" target="1.8" />
+      <module name="youlexuan_seckill_service" target="1.8" />
+      <module name="youlexuan_seckill_web" target="1.8" />
+      <module name="youlexuan_sellergoods_interface" target="1.8" />
+      <module name="youlexuan_sellergoods_service" target="1.8" />
+      <module name="youlexuan_shop_web" target="1.8" />
+      <module name="youlexuan_solr_util" target="1.8" />
+      <module name="youlexuan_task_service" target="1.8" />
+      <module name="youlexuan_user_interface" target="1.8" />
+      <module name="youlexuan_user_service" target="1.8" />
+      <module name="youlexuan_user_web" target="1.8" />
+    </bytecodeTargetLevel>
+  </component>
+  <component name="JavacSettings">
+    <option name="ADDITIONAL_OPTIONS_OVERRIDE">
+      <module name="sms_service" options="-parameters" />
+    </option>
+  </component>
+</project>

@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>示例</title>
+    <script src="angular.min.js"></script>
+    <script>
+        //第一个参数：模块名
+        //
+        var app=angular.module('myApp',[]);
+
+
+        app.controller('myController',function ($scope) {
+
+            $scope.i =1;
+
+
+            $scope.add=function () {
+                alert("hahahahahhaha");
+            }
+
+        });
+
+
+    </script>
+</head>
+<body ng-app="myApp" ng-controller="myController" ng-init="age=1999">
+
+我啦啦啦啦啦:{{100+200}}
+<br>
+姓名：<input type="text" ng-model="userName"/>
+<br>
+你输入的名字：{{userName}}
+
+<br>
+初始化年龄:{{age}}
+
+<br>
+angular的控制器
+获取控制器中的变量：{{i}}
+
+<input type="button" ng-click="add()" value="ppp">
+
+
+
+
+</body>
+</html>

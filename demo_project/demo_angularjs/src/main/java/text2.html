@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>示例</title>
+    <script src="angular.min.js"></script>
+    <script>
+        //第一个参数：模块名
+        //
+        var app=angular.module('myApp',[]);
+
+
+        app.controller('myController',function ($scope) {
+
+            $scope.nums = [10,100,200];
+
+            $scope.stus = [{"name":"怕",'age':'10','gender':'男'},{"name":"p",'age':'10','gender':'男'},{"name":"c",'age':'10','gender':'男'}]
+
+        });
+
+
+    </script>
+</head>
+<body ng-app="myApp" ng-controller="myController" ng-init="age=1999">
+
+遍历数组：
+<ul>
+    <li ng-repeat="x in nums">{{x}}</li>
+</ul>
+
+
+遍历数组：
+<ul>
+    <li ng-repeat="stu in stus">{{stu.name}}</li>
+</ul>
+
+</body>
+</html>
