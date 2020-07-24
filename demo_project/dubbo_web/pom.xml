@@ -16,7 +16,7 @@
     <properties>
         <spring.version>5.0.1.RELEASE</spring.version>
         <dubbo.version>2.6.1</dubbo.version>
-        <zookeeper.version>3.4.12</zookeeper.version>
+        <zookeeper.version>3.4.14</zookeeper.version>
     </properties>
 
 
